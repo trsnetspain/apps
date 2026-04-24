@@ -2,7 +2,7 @@
 body { background-color: #121212; color: #fff; font-family: 'Barlow', sans-serif; }
 
 /* HEADER */
-.hero-header { height: 500px; background: url('BANNER1.PNG') center top/cover; position: relative; }
+.hero-header { height: 500px; background: url('https://trsnetspain.github.io/apps/BANNER1.png') center top/cover; position: relative; }
 .overlay-gradient { position: absolute; bottom: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 20%, #121212 100%); }
 .top-bar { position: absolute; top: 20px; width: 90%; left: 5%; display: flex; justify-content: space-between; z-index: 10; }
 .logo span { color: #ff5400; font-weight: 900; }

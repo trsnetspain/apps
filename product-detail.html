@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - TRSGAMING</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <header class="hero-header">
+        <div class="overlay-gradient"></div>
+        
+        <div class="logo absolute top-4 left-4 text-white font-bold text-lg z-10">TRS SHOP</div>
+        
+        <nav class="hidden lg:flex lg:absolute lg:top-20 lg:left-1/2 lg:transform lg:-translate-x-1/2 gap-10 bg-black/20 backdrop-blur-lg rounded-xl px-6 py-3">
+            <a href="index.html" class="text-lg uppercase tracking-widest font-bold text-white/70 hover:text-orange-500 transition-all relative group/link">
+              Inicio
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all group-hover/link:w-full"></span>
+            </a>
+            <a href="trsnet1.html" class="text-lg uppercase tracking-widest font-bold text-white/70 hover:text-orange-500 transition-all relative group/link">
+              TRSNET
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all group-hover/link:w-full"></span>
+            </a>
+            <a href="trsnet2.html" class="text-lg uppercase tracking-widest font-bold text-white/70 hover:text-orange-500 transition-all relative group/link">
+              FORO
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all group-hover/link:w-full"></span>
+            </a>
+          </nav>
+      
+    </header>
+
+    <main class="content-wrapper">
+        <div class="main-purchase-grid">
+            <div class="cover-art">
+                <img src="https://gaming-cdn.com/images/products/18992/616x353/tomodachi-life-una-vida-de-ensueno-switch-nintendo-eshop-cover.jpg" alt="Cover">
+            </div>
+
+            <div class="glass-card">
+                <h1>Tomodachi Life: Una vida de ensueño – Switch</h1>
+                <div class="meta-tags">
+                    <span class="badge-dark"><i class="fa-solid fa-gamepad"></i> Nintendo eShop</span>
+                    <span class="status-green">✔ En stock</span>
+                    <span class="badge-dark">✔ Descarga digital</span>
+                </div>
+                <div class="users-online">
+                    <i class="fa-solid fa-fire"></i> 211 usuarios en esta página
+                </div>
+                <div class="price-section">
+                    <button class="btn-wish"><i class="fa-regular fa-heart"></i></button>
+                    <div class="price-box">
+                        <span class="old-price">60 €</span>
+                        <span class="discount">-6%</span>
+                        <span class="current-price">56.19 €</span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> Añadir a la cesta</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="bottom-layout">
+            
+            <div class="left-column">
+                <div class="section-block">
+                    <h3>Visuales</h3>
+                    <div class="video-container">
+                        <img src="https://gaming-cdn.com/images/products/18992/616x353/tomodachi-life-una-vida-de-ensueno-switch-nintendo-eshop-cover.jpg" id="bigImage">
+                        <div id="videoPlayerContainer" style="display:none; width:100%; height:100%;">
+                            <iframe id="youtubeVideo" width="100%" height="100%" src="https://www.youtube.com/embed/NafCJXNhaBo?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                        <div class="play-overlay" id="playBtn" onclick="startVideo()">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+
+                    <div class="thumbnail-grid">
+                        <div class="t-img"><img src="https://gaming-cdn.com/images/products/18992/616x353/tomodachi-life-una-vida-de-ensueno-switch-nintendo-eshop-cover.jpg" onclick="selectMedia(this.src, true)"></div>
+                        <div class="t-img"><img src="https://gaming-cdn.com/images/products/18992/616x353/tomodachi-life-una-vida-de-ensueno-switch-nintendo-eshop-cover.jpg" onclick="selectMedia(this.src, false)"></div>
+                        <div class="t-img"><img src="https://gaming-cdn.com/images/products/18992/616x353/tomodachi-life-una-vida-de-ensueno-switch-nintendo-eshop-cover.jpg" onclick="selectMedia(this.src, false)"></div>
+                        <div class="t-img"><img src="https://gaming-cdn.com/images/products/18992/616x353/tomodachi-life-una-vida-de-ensueno-switch-nintendo-eshop-cover.jpg" onclick="selectMedia(this.src, false)"></div>
+                    </div>
+                </div>
+
+                <div class="section-block description-container">
+                    <h3>Descripción</h3>
+                    <div class="description-content">
+                        <p>Tras más de 10 años, <strong>¡Tomodachi Life está de regreso!</strong> Tomodachi Life: Una vida de ensueño llegará a Nintendo Switch en primavera de 2026. En una diminuta isla perdida en el mar, los personajes Mii viven a su aire, libres de preocupaciones.</p>
+                        <p>Te toca tomar las riendas de la isla y, para ello, crearás personajes Mii de quienes te gustaría que viviesen en ella: tus amigos, tu familia o esa persona especial. ¡Cualquier combinación es posible en este simulador de vida único!</p>
+                        <a href="#" class="read-more">Leer más <i class="fa-solid fa-chevron-down"></i></a>
+                    </div>
+                </div>
+
+                <div class="section-block news-container">
+                    <h3>Últimas noticias de este juego <i class="fa-solid fa-chevron-right"></i></h3>
+                    <div class="news-list">
+                        <div class="news-card">
+                            <div class="news-img"><img src="https://gaming-cdn.com/images/products/18992/616x353/tomodachi-life-una-vida-de-ensueno-switch-nintendo-eshop-cover.jpg"></div>
+                            <div class="news-text">
+                                <span class="news-tag">hace 2 días</span>
+                                <h4>El desarrollo de Tomodachi Life se terminó hace un año</h4>
+                                <p>Fuentes internas de Nintendo confirman que el juego ha estado puliéndose durante meses para un lanzamiento perfecto.</p>
+                            </div>
+                        </div>
+                        <div class="news-card">
+                            <div class="news-img"><img src="https://gaming-cdn.com/images/products/18992/616x353/tomodachi-life-una-vida-de-ensueno-switch-nintendo-eshop-cover.jpg"></div>
+                            <div class="news-text">
+                                <span class="news-tag-orange"><i class="fa-solid fa-fire"></i> Trending</span>
+                                <h4>Análisis: ¿Por qué es el simulador más esperado?</h4>
+                                <p>Repasamos las mecánicas que hicieron grande al original y qué novedades trae esta versión de Switch.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="sticky-side">
+                    <div class="rating-header">
+                        <div class="rating-circle">10</div>
+                        <div class="rating-meta">Basada en <br><strong>1200 reseñas</strong></div>
+                    </div>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Compatibilidad:</span> <a href="#">Ver lista</a></div>
+                        <div class="spec-row"><span>Instalación:</span> <a href="#">Cómo activar</a></div>
+                        <div class="spec-row"><span>Desarrollador:</span> Nintendo</div>
+                        <div class="spec-row"><span>Fecha:</span> 16 abril 2026</div>
+                        <div class="spec-row"><span>Género:</span> Simulación</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        const bigImage = document.getElementById('bigImage');
+        const videoContainer = document.getElementById('videoPlayerContainer');
+        const playBtn = document.getElementById('playBtn');
+        const iframe = document.getElementById('youtubeVideo');
+
+        function startVideo() {
+            bigImage.style.display = 'none';
+            playBtn.style.display = 'none';
+            videoContainer.style.display = 'block';
+            if (!iframe.src.includes("autoplay")) iframe.src += "&autoplay=1";
+        }
+
+        function selectMedia(src, isVideo) {
+            videoContainer.style.display = 'none';
+            iframe.src = iframe.src.split('?')[0] + "?enablejsapi=1"; 
+            bigImage.src = src;
+            bigImage.style.display = 'block';
+            playBtn.style.display = isVideo ? 'flex' : 'none';
+        }
+    </script>
+</body>
+</html>

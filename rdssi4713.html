@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TRS1 FM | RDS EDITOR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0b0b0b;
+            --card-bg: rgba(20, 20, 20, 0.95);
+            --accent-orange: #ff6b00;
+            --accent-green: #2ecc71;
+            --text-main: #ffffff;
+            --text-dim: #888;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Barlow', sans-serif;
+            margin: 0;
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar { display: flex; justify-content: center; padding: 20px; gap: 30px; background: rgba(0,0,0,0.5); border-bottom: 1px solid #222; }
+        .navbar a { color: white; text-decoration: none; font-size: 14px; font-weight: 700; opacity: 0.6; text-transform: uppercase; letter-spacing: 1px; }
+
+        .container { max-width: 1000px; margin: 50px auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; padding: 20px; flex: 1; }
+
+        .hero-img { width: 100%; border-radius: 15px; border: 1px solid #333; filter: drop-shadow(0 0 20px rgba(0,0,0,1)); }
+
+        .buy-card {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid #222;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        h1 { font-size: 26px; margin: 0 0 5px 0; font-weight: 800; text-transform: uppercase; }
+        .tag { color: var(--accent-green); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; display: block; margin-bottom: 20px; }
+
+        .input-group { margin-bottom: 18px; }
+        label { display: block; font-size: 11px; color: var(--text-dim); margin-bottom: 6px; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; }
+        
+        input {
+            width: 100%; background: #000; border: 1px solid #333; color: white;
+            padding: 12px; border-radius: 8px; font-size: 15px; box-sizing: border-box; 
+            outline: none; transition: 0.2s; font-family: 'Barlow', sans-serif;
+        }
+        input:focus { border-color: var(--accent-orange); background: #050505; }
+
+        .flex-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+        .btn-orange {
+            width: 100%; background: var(--accent-orange); color: white; border: none;
+            padding: 18px; border-radius: 10px; font-weight: 900; font-size: 16px;
+            cursor: pointer; text-transform: uppercase; margin-top: 10px; transition: 0.3s;
+            font-family: 'Barlow', sans-serif; letter-spacing: 1px;
+        }
+        .btn-orange:hover { background: #e66000; transform: translateY(-2px); }
+
+        .btn-download {
+            background: #2a2a2a; color: #fff; border: 1px solid #444;
+            padding: 12px; border-radius: 8px; width: 100%; margin-top: 15px;
+            cursor: pointer; font-family: 'Barlow', sans-serif; font-weight: 700;
+            text-transform: uppercase; font-size: 12px; transition: 0.3s;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            text-decoration: none;
+        }
+        .btn-download:hover { background: #3a3a3a; border-color: var(--text-main); }
+
+        .btn-conn {
+            background: transparent; border: 1px solid #444; color: white;
+            padding: 10px; border-radius: 5px; width: 100%; margin-bottom: 25px; 
+            cursor: pointer; font-size: 13px; font-family: 'Barlow', sans-serif;
+            font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        .score-box { display: flex; align-items: center; gap: 12px; margin-top: 30px; border-top: 1px solid #222; padding-top: 20px; }
+        .circle { width: 45px; height: 45px; border-radius: 50%; border: 2px solid var(--accent-green); display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--accent-green); font-size: 20px; }
+
+        /* FOOTER COMPACTO */
+        footer {
+            text-align: center;
+            padding: 15px 20px; /* Reducido de 40px a 15px */
+            background: rgba(0, 0, 0, 0.9);
+            border-top: 1px solid #222;
+            color: var(--text-dim);
+            font-size: 10px; /* Letra un poco más pequeña */
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">INICIO</a>
+    <a href="https://trglix.github.io/">TRSNET</a>
+    <a href="trsnet2.html">FORO</a>
+</div>
+
+<div class="container">
+    <div>
+        <img src="BANNER11.png" class="hero-img">
+        <div style="margin-top: 25px;">
+            <label>Descripción del sistema</label>
+            <p style="color: var(--text-dim); font-size: 15px; line-height: 1.6;">
+                Panel de control avanzado para el transmisor Si4713. Modifica los metadatos RDS y la potencia de salida en tiempo real con latencia cero.
+            </p>
+            <a href="codigo_predeterminado.ino" download="codigo_predeterminado.ino" class="btn-download">
+                <span>💾</span> Descargar código Arduino (.ino)
+            </a>
+        </div>
+    </div>
+
+    <div class="buy-card">
+        <button id="conn" class="btn-conn">VINCULAR ARDUINO</button>
+        
+        <span class="tag">✔ RECURSO DISPONIBLE</span>
+        <h1>Configuración RDS</h1>
+        <p style="color: var(--text-dim); font-size: 14px; margin-bottom: 25px;">Ajusta los parámetros de emisión.</p>
+        
+        <div class="input-group">
+            <label>Código PI (Hexadecimal)</label>
+            <input type="text" id="pi" value="E335" maxlength="4">
+        </div>
+
+        <div class="input-group">
+            <label>Nombre de Estación (PS)</label>
+            <input type="text" id="ps" maxlength="8" placeholder="Ej: Tu emisora...">
+        </div>
+
+        <div class="input-group">
+            <label>Texto Dinámico (RadioText)</label>
+            <input type="text" id="rt" placeholder="Escribe el mensaje RDS...">
+        </div>
+
+        <div class="input-group flex-row">
+            <div>
+                <label>Potencia (dBuV)</label>
+                <input type="number" id="pwr" value="115" min="88" max="115">
+            </div>
+            <div style="display: flex; align-items: flex-end;">
+                 <button class="btn-orange" style="margin: 0; padding: 12px;" onclick="txAll()">ACTUALIZAR</button>
+            </div>
+        </div>
+
+        <div class="score-box">
+            <div class="circle">10</div>
+            <div style="font-size: 13px;">
+                <b style="color: var(--accent-green); text-transform: uppercase;">TRSNET Verified</b><br>
+                <span style="color: var(--text-dim);">Emisión RDS fiable</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    TRSNET © 2026 - TODOS LOS DERECHOS RESERVADOS
+</footer>
+
+<script>
+    let p, w;
+
+    document.getElementById('conn').onclick = async () => {
+        try {
+            p = await navigator.serial.requestPort();
+            await p.open({ baudRate: 9600 });
+            w = p.writable.getWriter();
+            document.getElementById('conn').innerText = "DISPOSITIVO CONECTADO";
+            document.getElementById('conn').style.borderColor = "var(--accent-green)";
+            document.getElementById('conn').style.color = "var(--accent-green)";
+        } catch (e) { alert("Error de conexión Serial"); }
+    };
+
+    async function send(cmd, val) {
+        if(!w) return;
+        await w.write(new TextEncoder().encode(cmd + val + "\n"));
+    }
+
+    async function txAll() {
+        if(!w) { alert("Primero vincula el Arduino"); return; }
+        const ps = document.getElementById('ps').value;
+        const rt = document.getElementById('rt').value;
+        const pi = document.getElementById('pi').value;
+        const pwr = document.getElementById('pwr').value;
+
+        if(pi) await send('I', pi);
+        if(ps) await send('S', ps);
+        if(rt) await send('T', rt);
+        if(pwr) await send('P', pwr);
+        
+        console.log("Datos RDS actualizados");
+    }
+</script>
+
+</body>
+</html>

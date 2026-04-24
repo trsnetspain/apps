@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - TRSGAMING</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <header class="hero-header" style="background-image: url('+.png'); background-size: cover; background-position: center;">
+        <div class="overlay-gradient"></div>
+        
+        <div class="logo absolute top-4 left-4 text-white font-bold text-lg z-10">TRS SHOP</div>
+        
+        <nav class="hidden lg:flex lg:absolute lg:top-20 lg:left-1/2 lg:transform lg:-translate-x-1/2 gap-10 bg-black/20 backdrop-blur-lg rounded-xl px-6 py-3">
+            <a href="index.html" class="text-lg uppercase tracking-widest font-bold text-white/70 hover:text-orange-500 transition-all relative group/link">
+              Inicio
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all group-hover/link:w-full"></span>
+            </a>
+            <a href="trsnet1.html" class="text-lg uppercase tracking-widest font-bold text-white/70 hover:text-orange-500 transition-all relative group/link">
+              TRSNET
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all group-hover/link:w-full"></span>
+            </a>
+            <a href="trsnet2.html" class="text-lg uppercase tracking-widest font-bold text-white/70 hover:text-orange-500 transition-all relative group/link">
+              FORO
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all group-hover/link:w-full"></span>
+            </a>
+          </nav>
+      
+    </header>
+
+    <main class="content-wrapper">
+        <div class="main-purchase-grid">
+            <div class="cover-art">
+                <img src="BANNER1.png" alt="Cover">
+            </div>
+
+            <div class="glass-card">
+                <h1>TRSNET+                    </h1>
+                <div class="meta-tags">
+                    <span class="badge-dark"><i class="fa-solid fa-gamepad"></i>PC, Android</span>
+                    <span class="badge-dark" style="background: rgba(255,0,0,0.4);">✖ No disponible</span>
+                       <span class="badge-dark" style="background: rgba(255,0,0,0.4);">✖ Descarga</span>
+                </div>
+                <div class="users-online">
+                    <i class="fa-solid fa-fire"></i> PROXIMAMENTE
+                </div>
+                <div class="price-section">
+                    
+                    <div class="price-box">
+                        
+                        <span class="current-price">FREE</span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="btn-cart" disabled style="background: #888888 !important; cursor: not-allowed;"><i class="fa-solid fa-cart-shopping"></i>No disponible</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="bottom-layout">
+            
+            <div class="left-column">
+                <div class="section-block">
+                    <h3>Visuales</h3>
+                    <div class="video-container">
+                        <img src="+.png" id="bigImage">
+                        <div id="videoPlayerContainer" style="display:none; width:100%; height:100%;">
+                            <iframe id="youtubeVideo" width="100%" height="100%" src="https://www.youtube.com/embed/ZQUzwqldLHo?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                        <div class="play-overlay" id="playBtn" onclick="startVideo()">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+
+                    <div class="thumbnail-grid">
+                        <div class="t-img" style="position: relative; cursor: pointer;" onclick="startVideo()"><img src="BANNER1.png"><i class="fa-solid fa-play" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 30px; text-shadow: 0 0 10px rgba(0,0,0,0.7);"></i></div>
+                        <div class="t-img"><img src="BANNER1.png" onclick="selectMedia(this.src)"></div>
+                        <div class="t-img"><img src="+.png" onclick="selectMedia(this.src)"></div>
+                        
+                        
+                    </div>
+                </div>
+
+                <div class="section-block description-container">
+                    <h3>Descripción</h3>
+                    <div class="description-content">
+                        <p><strong>TRSNET+ </strong> es la herramienta completa para analizar y controlar todos tus gastos en TRSNET. Con una interfaz intuitiva y reportes detallados, puedes visualizar tus patrones de gasto y optimizar tu presupuesto.</p>
+                        <p>Monitoriza automáticamente tus transacciones, categoriza tus compras, recibe alertas de límites de presupuesto y genera reportes visuales que te ayudarán a tomar decisiones financieras más informadas. ¡Gestiona tus finanzas como un profesional!</p>
+                        <a href="#" class="read-more">Leer más <i class="fa-solid fa-chevron-down"></i></a>
+                    </div>
+                </div>
+
+                <div class="section-block news-container">
+                    <h3>Últimas noticias de esta app <i class="fa-solid fa-chevron-right"></i></h3>
+                    <div class="news-list">
+                        <div class="news-card">
+                            <div class="news-img"><img src="BANNER1.png"></div>
+                            <div class="news-text">
+                                <span class="news-tag">hace 1 semana</span>
+                                <h4>Nueva versión con gráficos mejorados</h4>
+                                <p>Análisis de gastos más detallados con gráficos interactivos y categorías personalizadas para mejor control financiero.</p>
+                            </div>
+                        </div>
+                        <div class="news-card">
+                            <div class="news-img"><img src="+.png"></div>
+                            <div class="news-text">
+                                <span class="news-tag-orange"><i class="fa-solid fa-fire"></i> Trending</span>
+                                <h4>Los usuarios ahorran un 35% más con TRSNET+ </h4>
+                                <p>Miles de usuarios han optimizado su presupuesto usando nuestras herramientas de análisis avanzadas y alertas inteligentes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="sticky-side">
+                    <div class="rating-header">
+                        <div class="rating-circle" style="color: #ff0000; font-size: 30px; font-weight: bold;">!</div>
+                        <div class="rating-meta" style="color: #ff0000;">Nota de seguridad<br><strong>SIN VERIFICACIÓN DE VIRUS</strong></div>
+                    </div>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Compatibilidad:</span> <a href="#">PC, Android</a></div>
+                        <div class="spec-row"><span>Instalación:</span> <a href="#">Instalador</a></div>
+                        <div class="spec-row"><span>Desarrollador:</span> TRSNET ES</div>
+                        <div class="spec-row"><span>Fecha:</span> 28 dicembre 2025</div>
+                        <div class="spec-row"><span>Género:</span>Administración</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        const bigImage = document.getElementById('bigImage');
+        const videoContainer = document.getElementById('videoPlayerContainer');
+        const playBtn = document.getElementById('playBtn');
+        const iframe = document.getElementById('youtubeVideo');
+
+        function startVideo() {
+            bigImage.style.display = 'none';
+            playBtn.style.display = 'none';
+            videoContainer.style.display = 'block';
+            if (!iframe.src.includes("autoplay")) iframe.src += "&autoplay=1";
+        }
+
+        function selectMedia(src, isVideo) {
+            videoContainer.style.display = 'none';
+            iframe.src = iframe.src.split('?')[0] + "?enablejsapi=1"; 
+            bigImage.src = src;
+            bigImage.style.display = 'block';
+            playBtn.style.display = isVideo ? 'flex' : 'none';
+        }
+    </script>
+</body>
+</html>
